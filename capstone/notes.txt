@@ -2,7 +2,7 @@ function GetData(){
   const [data, setData] = useState({})
 
   useEffect(()=>{
-    fetch("/")
+    fetch("/resources")
     .then(res => res.json())
     .then(data => setData(data))
   }, [])

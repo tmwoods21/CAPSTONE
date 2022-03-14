@@ -1,8 +1,105 @@
 .App {
   text-align: center;
+
+}
+
+
+nav {
+  background-color: #83c783;
+  overflow: hidden;
 }
 
 nav a {
   padding:2vw;
+  float: left;
+  color: rgb(225, 255, 213);
+  text-align: center;
+  text-decoration: none;
+  font-size: 17px;
   
+}
+
+nav .rside_link {
+  float: right;
+}
+
+nav a:hover {
+  background-color: #51c251;
+  color: black;
+}
+
+.header{
+  background-image: url("https://i.pinimg.com/564x/d0/66/10/d06610a418fa45b9ff4cf2726bb6dd24.jpg");
+  /* background-size: cover; */
+  padding: 10px;
+  margin: 5px;
+}
+
+.image_container{
+  
+  display: inline-block;
+  
+}
+
+.boxed {
+  border: 3px solid rgb(255, 255, 255) ;
+  background-color: white;
+  padding: 5px;
+  margin: 10px;
+  text-align: justify;
+}
+
+input {
+  width: 70%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
+button {
+  margin-top: 20px;
+  width: 15%;
+  padding: 5px;
+  background-color: #83c783;
+  color: white;
+  border-style:none;
+  border-radius: 5px;
+}
+
+.main_resources {
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 0.9em;
+  /* font-family: sans-serif; */
+  min-width: 400px;
+  /* box-shadow: 0 0 20px rgba(0, 0, 0, 0.15); */
+}
+
+.resource_name{
+  background-color: #91c5a5;
+  color: #ffffff;
+  text-align: left;
+  
+}
+
+thead tr{
+  background-color: #009879;
+  color: #ffffff;
+  text-align: left;
+}
+
+th, td{
+  padding: 12px 15px;
+}
+
+tbody tr {
+  border-bottom: 1px solid #f3f3f3;
+}
+
+tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+tbody tr:last-of-type {
+  border-bottom: 2px solid #009879;
 }
