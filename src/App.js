@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Link, Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import Home from './views/home'
 import './App.css';
 import './components/navbar'
@@ -21,7 +21,7 @@ function App() {
   const [resourceInput, setResourceInput] = useState(initialInput)
 
   const handleFetch = async () => {
-    const URL = "http://localhost:8000/resources"
+    const URL =process.env.DB_URI ||  "http://localhost:8000/resources"
     fetch(URL)
     .then(resp=>{
       console.log(resp)

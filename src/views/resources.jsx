@@ -1,6 +1,4 @@
 import { useState, useEffect } from 'react';
-// import data from '../data';
-
 import staticData from '../data'
 import { useNavigate } from 'react-router-dom'
 
@@ -21,7 +19,7 @@ function Resources(){
     const [resourceInput, setResourceInput] = useState(initialInput)
     
     const handleFetch = async () => {
-        const URL = "http://localhost:8000/resources"
+        const URL =process.env.DB_URI || "http://localhost:8000/resources"
         fetch(URL)
         .then(resp=>{
           console.log(resp)
@@ -29,7 +27,6 @@ function Resources(){
         })
         .then(data=>{
           console.log(data)
-        //   setResources(data)
         })
         .catch(err => {
             console.log(err) 
@@ -38,28 +35,9 @@ function Resources(){
     async function handleCreateResource(e){
         e.preventDefault()
         console.log(resourceInput)
-        // const DB_URI = process.env.DB_URI || "http://localhost:8000/resources";
-        // try {
-        //     const config = {
-        //         method: "POST",
-        //         body: JSON.stringify(data),
-        //         headers: {
-        //             "Content-Type" : "application/json",
-        //         },
-            
-        // };
-        // const resourceResp = await fetch(DB_URI, config);
-        // const newResource = await resourceResp.json();
-        // setResources([...resources, newResource]);
-        // } catch (err) {
-        //  console.log(err);
-        // }
+        
         await newResource(resourceInput)
-        // make a fetch call to BE
-        // customized request as a post request
-        // update resources by adding new resource to existing resource
-        // https://git.generalassemb.ly/seir-1213/mern-react-codealongs/blob/main/02_FE_React_Create_Del.md
-        // look for newHoliday example
+        
         navigate(`/resourceslist`, {replace: true})
     }
 
@@ -69,7 +47,7 @@ function Resources(){
     }
 
     const newResource = async (data)  => {
-        const URL = "http://localhost:8000/resources"
+        const URL =process.env.DB_URI || "http://localhost:8000/resources"
         const options = {
             method: "POST",
             body: JSON.stringify(data),

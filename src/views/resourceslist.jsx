@@ -48,7 +48,7 @@ function Resourceslist(){
         <main className="container_main">
           <table className="main_resources">
             <thead>
-            <h2 className="container_title"></h2>
+            
               <tr>
               
                 <th>Name:</th>
@@ -70,7 +70,7 @@ function Resourceslist(){
                     <td>{resource.location}</td>
                     <td>{resource.description}</td>
                     <td>{resource.website}</td>
-                    {/* <td onClick={() => this.deleteResource(resource._id)}>X</td> */}
+                    
                     <td><a href="#" alt="test" onClick={() => deleteResource(resource._id)}>X</a></td>
                   </tr>
                   </>
