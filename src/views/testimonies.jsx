@@ -10,7 +10,7 @@ function Testimonies(){
                 Summary: Kathleen Munro, a Youth Network Ambassador, shares her experience learning about her panic attacks and how to manage them.
                 This post is part of a blog series dedicated to sharing personal stories, journeys, and insights about mental health and anxiety from members of our community.
                 <br/>
-                <a href="https://www.anxietycanada.com/articles/this-is-how-it-feels-to-live-with-a-panic-disorder/" target="_blank">Kathleen's Blog</a>
+                <a href="https://www.anxietycanada.com/articles/this-is-how-it-feels-to-live-with-a-panic-disorder/" target="_blank" rel="noreferrer">Kathleen's Blog</a>
                 </p>
 
                 <h3>&#127807;Name: Tanya</h3>
