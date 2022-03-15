@@ -18,25 +18,6 @@ function Resourceslist(){
         }
       };
 
-    const newResource = async (data)  => {
-        
-        try {
-            const config = {
-                method: "POST",
-                body: JSON.stringify(data),
-                headers: {
-                    "Content-Type" : "application/json",
-                },
-            
-        };
-        const resourceResp = await fetch(DB_URI, config);
-        const newResource = await resourceResp.json();
-        setResources([...resources, newResource]);
-        } catch (err) {
-         console.log(err);
-        }
-        };
-    
 
       const deleteResource = async (id) => {
         try {
@@ -67,7 +48,7 @@ function Resourceslist(){
         <main className="container_main">
           <table className="main_resources">
             <thead>
-            {/* <h2 className="container_title">Resources List</h2> */}
+            <h2 className="container_title"></h2>
               <tr>
               
                 <th>Name:</th>
@@ -83,12 +64,17 @@ function Resourceslist(){
             <tbody className="resource_body">
               {resources &&
                 resources.map((resource, index) => (
-                  <tr className="identifier" key={resource._id}>
+                  <>
+                    <tr className="identifier" key={resource._id, index}>
                     <td>{resource.name}</td>
                     <td>{resource.location}</td>
                     <td>{resource.description}</td>
                     <td>{resource.website}</td>
+                    {/* <td onClick={() => this.deleteResource(resource._id)}>X</td> */}
+                    <td><a href="#" alt="test" onClick={() => deleteResource(resource._id)}>X</a></td>
                   </tr>
+                  </>
+                 
                 ))}
             </tbody>
           </table>

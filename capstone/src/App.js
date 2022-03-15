@@ -42,7 +42,7 @@ function App() {
   
       <div className="App">
         <Navbar />
-        <h2></h2> 
+        <h4>Anxiety and Me &#127807;</h4> 
 
         <Routes>
           <Route path="/" element={<Home />} />
