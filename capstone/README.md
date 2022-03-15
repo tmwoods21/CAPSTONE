@@ -11,4 +11,6 @@ As a user, I would like to get a better understanding of the disorder to see if 
 As a user, I have someone in my life that may benefit from the resources provided.
 as a user, I do suffer from anxiety and I feel alone and would like to see how others got through their situation.
 
-## MVP Goals
+## Stretch Goal
+Give the user the abillity to create their own blog
+User login/sign up to save testimonies/resources
