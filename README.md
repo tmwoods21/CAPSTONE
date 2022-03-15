@@ -1,5 +1,10 @@
 # Anxiety and Me
+
+Front-end:
 https://wonderful-kepler-6805e4.netlify.app/
+
+Back-end:
+https://still-garden-49174.herokuapp.com/
 
 
 ## Technologies Used
