@@ -19,7 +19,7 @@ function App() {
 
 
   const handleFetch = async () => {
-    const URL =process.env.DB_URI ||  "http://localhost:8000/resources"
+    const URL =`${process.env.REACT_APP_SERVER_URI}/resources` ||  "http://localhost:8000/resources"
     fetch(URL)
     .then(resp=>{
       console.log(resp)

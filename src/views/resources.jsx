@@ -19,7 +19,7 @@ function Resources(){
     const [resourceInput, setResourceInput] = useState(initialInput)
     
     const handleFetch = async () => {
-        const URL =process.env.DB_URI || "http://localhost:8000/resources"
+        const URL =`${process.env.REACT_APP_SERVER_URI}/resources` || "http://localhost:8000/resources"
         fetch(URL)
         .then(resp=>{
           console.log(resp)
@@ -47,7 +47,7 @@ function Resources(){
     }
 
     const newResource = async (data)  => {
-        const URL =process.env.DB_URI || "http://localhost:8000/resources"
+        const URL =process.env.REACT_APP_SERVER_URI || "http://localhost:8000/resources"
         const options = {
             method: "POST",
             body: JSON.stringify(data),

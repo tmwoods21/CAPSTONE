@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 
 
 function Resourceslist(){
-    const DB_URI = process.env.DB_URI || "http://localhost:8000/resources";
+    const REACT_APP_SERVER_URI = `${process.env.REACT_APP_SERVER_URI}/resources` || "http://localhost:8000/resources";
 
     const [resources, setResources] = useState([]);
     console.log(resources)
@@ -10,7 +10,7 @@ function Resourceslist(){
 
     const handleFetch = async () => {
         try {
-          const resources = await fetch(DB_URI);
+          const resources = await fetch(REACT_APP_SERVER_URI);
           const parsedResource = await resources.json();
           setResources(parsedResource);
         } catch (err) {
@@ -21,7 +21,7 @@ function Resourceslist(){
 
       const deleteResource = async (id) => {
         try {
-          const deletedResource = await fetch(`${DB_URI}/${id}`, {
+          const deletedResource = await fetch(`${REACT_APP_SERVER_URI}/${id}`, {
             method: "DELETE",
           });
           const parsedResource = await deletedResource.json();
