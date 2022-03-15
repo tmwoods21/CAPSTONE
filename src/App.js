@@ -12,13 +12,11 @@ import Resourceslist from './views/resourceslist'
 
 console.log(staticData)
 function App() {
-  const initialInput = {
-    name: ""
-  }
+  
   const [resources, setResources] = useState([...staticData]);
   console.log(resources)
 
-  const [resourceInput, setResourceInput] = useState(initialInput)
+
 
   const handleFetch = async () => {
     const URL =process.env.DB_URI ||  "http://localhost:8000/resources"

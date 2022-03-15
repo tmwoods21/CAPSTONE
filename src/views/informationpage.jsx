@@ -29,11 +29,11 @@ function Informationpage(){
             <br/>
 
             <div className="videos">
-                <iframe width="420" height="315"
+                <iframe title="myFrame" width="420" height="315"
                 src="https://www.youtube.com/embed/tNYrtO0QHVs">
                 </iframe>
                 
-                <iframe width="420" height="315"
+                <iframe title="myFrame2" width="420" height="315"
                 src="https://www.youtube.com/embed/H2NC3W7lmk8">
                 </iframe>
 

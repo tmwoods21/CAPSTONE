@@ -3,7 +3,7 @@ function Home(){
         <div className="homepage_container">
             <div className="header">
                 <h2>What is Anxiety and Me?</h2>
-                <img className="image_container" src="https://post.medicalnewstoday.com/wp-content/uploads/sites/3/2020/10/GettyImages-1173939468_header-1024x575.jpg" width="550px" height="350px"/>
+                <img className="image_container" src="https://post.medicalnewstoday.com/wp-content/uploads/sites/3/2020/10/GettyImages-1173939468_header-1024x575.jpg" alt="" width="550px" height="350px"/>
                 <p className="boxed">
                     
                     Anxiety and Me is a website created for understand and identifying anxiety in its many forms.

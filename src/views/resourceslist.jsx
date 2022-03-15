@@ -40,7 +40,7 @@ function Resourceslist(){
 
       useEffect(() => {
         handleFetch();
-      }, []);
+      });
 
     return(
         <section className="container">
@@ -63,15 +63,15 @@ function Resourceslist(){
             </thead>
             <tbody className="resource_body">
               {resources &&
-                resources.map((resource, index) => (
+                resources.map((resource) => (
                   <>
-                    <tr className="identifier" key={resource._id, index}>
+                    <tr className="identifier" key={resource._id}>
                     <td>{resource.name}</td>
                     <td>{resource.location}</td>
                     <td>{resource.description}</td>
                     <td>{resource.website}</td>
                     
-                    <td><a href="#" alt="test" onClick={() => deleteResource(resource._id)}>X</a></td>
+                    <td><p onClick={() => deleteResource(resource._id)}>X</p></td>
                   </tr>
                   </>
                  

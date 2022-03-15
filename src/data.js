@@ -1,4 +1,5 @@
-export default [
+
+const person =[
     {
         "_id": "622a185fcdebfb2402d58c38",
         "name": "Random Person",
@@ -8,3 +9,6 @@ export default [
         "__v": 0
     }
 ]
+
+
+export default person;
